@@ -14,4 +14,5 @@ export class ProfilePage implements AfterViewInit {
     ngAfterViewInit(): void {
 
     }
+    // GET DE LA DATABASE PARA VER LA INFORMACIÓN
 }
