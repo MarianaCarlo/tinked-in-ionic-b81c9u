@@ -1,12 +1,35 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button
-                    text="{{'global.back' | translate}}">
-            </ion-back-button>
-        </ion-buttons>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="{{'global.back' | translate}}">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.email" name="email" placeholder="Enter new email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.password" placeholder="Enter new password" type="password"
+        name="password">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>City:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.city" placeholder="Enter new city" name="city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.country" placeholder="Enter new country" name="country"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Skills:</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.skills" placeholder="Enter new skills" name="skills"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Update</button>
+  </form>
 </ion-content>
